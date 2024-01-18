@@ -21,6 +21,12 @@ admin.get("/",(req,res)=>{
     res.send("welcome to admin login")
 })
 
+admin.post("/add", async (req, res) => {
+    let data = new adminModel(req.body);
+    console.log(data);
+    await data.save();
+    res.send(data);
+  });
 
 
 admin.post("/adminlogin", async (req, res) => {

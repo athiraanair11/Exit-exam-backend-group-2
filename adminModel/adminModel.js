@@ -3,7 +3,7 @@ let adminSchema=Mongoose.Schema(
 
     {
        email:String,
-       password:String
+       password:String,
     }
 )
 
